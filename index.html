@@ -1,0 +1,892 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Noubhar Ahmad | Mechanical Engineering, Clemson University</title>
+<meta property="og:title" content="Noubhar Ahmad | MSc Candidate, Mechanical Engineering">
+<meta property="og:description" content="Additive manufacturing, metamaterials and process optimization at Clemson University's Multiscale Manufacturing Laboratory.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#EFF3F4">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='7' y='7' width='18' height='18' transform='rotate(45 16 16)' fill='none' stroke='%23F56600' stroke-width='4'/%3E%3C/svg%3E">
+<style>body{margin:0}img{max-width:100%}[hidden]{display:none!important}:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}</style>
+<meta name="description" content="Noubhar Ahmad is an MSc candidate in Mechanical Engineering at Clemson University, working in the Multiscale Manufacturing Laboratory with Dr. Rodrigo Martinez-Duarte on additive manufacturing, metamaterials and process optimization.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: an engineering drawing sheet. Vellum by day, blueprint by night.
+   Sections are datum-lettered; the footer is the drawing's title block. */
+:root {
+  --paper: #EFF3F4;
+  --sheet: #F8FAFA;
+  --ink: #132230;
+  --ink-2: #3B4D5C;
+  --muted: #677987;
+  --rule: #CBD5DB;
+  --grid: rgba(19, 34, 48, .055);
+  --grid-major: rgba(19, 34, 48, .085);
+  --accent: #F56600;        /* Clemson orange: marks, fills */
+  --accent-ink: #B34800;    /* orange that passes as text on paper */
+  --btn-bg: #132230;
+  --btn-fg: #F8FAFA;
+  --header-bg: rgba(239, 243, 244, .9);
+  --on-accent: #132230;
+
+  --f-display: "Barlow Condensed", "Arial Narrow", "Roboto Condensed", sans-serif;
+  --f-body: "Barlow", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  --f-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+
+  --s-body: 1.0625rem;
+  --s-small: .9375rem;
+  --s-label: .75rem;
+  --s-h3: 1.25rem;
+  --s-h2: clamp(2rem, 4.2vw, 2.75rem);
+  --s-thesis: clamp(1.75rem, 3.6vw, 2.6rem);
+  --s-name: clamp(3.4rem, 9.5vw, 7.25rem);
+
+  --wrap: 1160px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #0B2340;
+    --sheet: #0F2B4C;
+    --ink: #E7F0F7;
+    --ink-2: #B7CADA;
+    --muted: #88A3B9;
+    --rule: #2A4B6D;
+    --grid: rgba(186, 218, 245, .06);
+    --grid-major: rgba(186, 218, 245, .1);
+    --accent: #FF7A26;
+    --accent-ink: #FF9C5C;
+    --btn-bg: #E7F0F7;
+    --btn-fg: #0B2340;
+    --header-bg: rgba(11, 35, 64, .9);
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #0B2340;
+  --sheet: #0F2B4C;
+  --ink: #E7F0F7;
+  --ink-2: #B7CADA;
+  --muted: #88A3B9;
+  --rule: #2A4B6D;
+  --grid: rgba(186, 218, 245, .06);
+  --grid-major: rgba(186, 218, 245, .1);
+  --accent: #FF7A26;
+  --accent-ink: #FF9C5C;
+  --btn-bg: #E7F0F7;
+  --btn-fg: #0B2340;
+  --header-bg: rgba(11, 35, 64, .9);
+  color-scheme: dark;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--f-body);
+  font-size: var(--s-body);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+body::before {
+  content: ""; position: fixed; inset: 0 0 auto;
+  height: env(safe-area-inset-top, 0px); z-index: 10;
+  background: var(--paper);
+}
+a { color: inherit; }
+a:focus-visible, button:focus-visible {
+  outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px;
+}
+.wrap {
+  max-width: var(--wrap); margin-inline: auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+@media (min-width: 720px) {
+  .wrap {
+    padding-left: max(32px, env(safe-area-inset-left, 0px));
+    padding-right: max(32px, env(safe-area-inset-right, 0px));
+  }
+}
+.label {
+  font-family: var(--f-mono); font-size: var(--s-label); font-weight: 500;
+  letter-spacing: .09em; text-transform: uppercase; color: var(--muted);
+}
+.skip {
+  position: absolute; left: 12px; top: -60px; z-index: 50;
+  background: var(--btn-bg); color: var(--btn-fg); padding: 8px 12px;
+  font-family: var(--f-mono); font-size: var(--s-label); text-decoration: none;
+}
+.skip:focus { top: 12px; }
+
+/* ---------- header ---------- */
+.site-head {
+  position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20;
+  background: var(--header-bg);
+  backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--rule);
+}
+.site-head .wrap {
+  display: flex; align-items: center; gap: 20px; min-height: 60px;
+}
+.brand {
+  font-family: var(--f-mono); font-size: .8125rem; font-weight: 500;
+  letter-spacing: .08em; text-transform: uppercase; text-decoration: none;
+  white-space: nowrap; display: inline-flex; align-items: center; gap: 10px;
+}
+.brand .tick { width: 10px; height: 10px; border: 2px solid var(--accent); transform: rotate(45deg); }
+.nav {
+  flex: 1; min-width: 0; overflow-x: auto; scrollbar-width: none;
+  display: flex; justify-content: flex-end;
+}
+.nav::-webkit-scrollbar { display: none; }
+.nav ul { display: flex; gap: 4px; list-style: none; margin: 0; padding: 0; }
+.nav a {
+  display: block; padding: 6px 10px; text-decoration: none; white-space: nowrap;
+  font-size: var(--s-small); font-weight: 500; color: var(--ink-2);
+  border-bottom: 2px solid transparent;
+}
+.nav a:hover { color: var(--ink); }
+.nav a.is-active { color: var(--ink); border-bottom-color: var(--accent); }
+.theme-btn {
+  flex: none; display: inline-flex; align-items: center; gap: 8px;
+  font-family: var(--f-mono); font-size: var(--s-label); letter-spacing: .08em; text-transform: uppercase;
+  background: transparent; color: var(--ink-2); border: 1px solid var(--rule);
+  padding: 6px 10px; cursor: pointer; border-radius: 2px;
+}
+.theme-btn:hover { color: var(--ink); border-color: var(--ink-2); }
+.theme-btn .swatch { width: 10px; height: 10px; border: 1px solid currentColor; background: var(--paper); }
+@media (max-width: 719px) {
+  .site-head .wrap { gap: 12px; }
+  .brand span.full { display: none; }
+  .nav { justify-content: flex-start; }
+}
+
+/* ---------- hero ---------- */
+.hero {
+  position: relative;
+  background-color: var(--paper);
+  background-image:
+    linear-gradient(var(--grid-major) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-major) 1px, transparent 1px),
+    linear-gradient(var(--grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+  background-size: 120px 120px, 120px 120px, 24px 24px, 24px 24px;
+  background-position: -1px -1px;
+  border-bottom: 1px solid var(--rule);
+}
+.hero .wrap {
+  display: grid; gap: 40px; padding-block: 56px 64px;
+  grid-template-columns: 1fr;
+}
+@media (min-width: 960px) {
+  .hero .wrap { grid-template-columns: minmax(0, 1.35fr) minmax(0, .85fr); gap: 64px; align-items: start; padding-block: 80px 88px; }
+}
+.hero-text { min-width: 0; display: grid; gap: 22px; }
+.role { display: flex; flex-wrap: wrap; gap: 6px 14px; align-items: center; }
+.role .dot { width: 5px; height: 5px; background: var(--accent); }
+.name {
+  font-family: var(--f-display); font-weight: 600; font-size: var(--s-name);
+  line-height: .9; letter-spacing: .005em; text-transform: uppercase; margin: 0;
+}
+.thesis {
+  font-family: var(--f-display); font-weight: 500; font-size: var(--s-thesis);
+  line-height: 1.12; margin: 6px 0 0; max-width: 22ch; text-wrap: balance;
+}
+.thesis em { font-style: normal; color: var(--accent-ink); }
+.lede { margin: 0; max-width: 62ch; color: var(--ink-2); font-size: 1.125rem; }
+.lede a { color: var(--ink); text-decoration-color: var(--accent); text-underline-offset: 3px; }
+
+.spec {
+  margin: 8px 0 0; max-width: 620px;
+  border: 1px solid var(--rule); background: var(--sheet);
+  display: grid; grid-template-columns: minmax(0, 9.5rem) minmax(0, 1fr);
+}
+.spec dt, .spec dd { margin: 0; padding: 10px 14px; border-bottom: 1px solid var(--rule); }
+.spec dt { border-right: 1px solid var(--rule); align-self: stretch; display: flex; align-items: center; }
+.spec dd { font-size: var(--s-small); font-weight: 500; min-width: 0; overflow-wrap: anywhere; }
+.spec dt:nth-last-of-type(1), .spec dd:last-of-type { border-bottom: 0; }
+.spec a { text-decoration-color: var(--accent); text-underline-offset: 3px; }
+@media (max-width: 479px) {
+  .spec { grid-template-columns: 1fr; }
+  .spec dt { border-right: 0; border-bottom: 0; padding-bottom: 0; }
+}
+
+.actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 6px; }
+.btn {
+  display: inline-flex; align-items: center; gap: 10px;
+  padding: 12px 18px; text-decoration: none; border-radius: 2px;
+  font-family: var(--f-mono); font-size: .8125rem; font-weight: 500; letter-spacing: .06em; text-transform: uppercase;
+  border: 1px solid var(--btn-bg); cursor: pointer;
+  transition: transform .15s ease, background-color .15s ease, color .15s ease;
+}
+.btn-primary { background: var(--btn-bg); color: var(--btn-fg); }
+.btn-primary:hover { transform: translateY(-1px); }
+.btn-ghost { background: transparent; color: var(--ink); border-color: var(--rule); }
+.btn-ghost:hover { border-color: var(--ink); }
+.btn svg { width: 14px; height: 14px; }
+
+/* portrait: framed like a detail view with registration marks */
+.portrait { margin: 0; justify-self: start; width: min(100%, 280px); position: relative; padding: 14px; order: -1; }
+@media (min-width: 960px) { .portrait { order: 0; justify-self: end; width: min(100%, 430px); margin-top: 8px; } }
+.portrait .frame { position: relative; border: 1px solid var(--rule); background: var(--sheet); padding: 8px; }
+.portrait img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; max-width: 100%; }
+.mark { position: absolute; width: 22px; height: 22px; pointer-events: none; }
+.mark::before, .mark::after { content: ""; position: absolute; background: var(--accent); }
+.mark::before { width: 100%; height: 2px; }
+.mark::after { width: 2px; height: 100%; }
+.mark.tl { top: 0; left: 0; }
+.mark.tr { top: 0; right: 0; } .mark.tr::before { right: 0; } .mark.tr::after { right: 0; }
+.mark.bl { bottom: 0; left: 0; } .mark.bl::before { bottom: 0; } .mark.bl::after { bottom: 0; }
+.mark.br { bottom: 0; right: 0; } .mark.br::before { bottom: 0; right: 0; } .mark.br::after { bottom: 0; right: 0; }
+.mark::before { transform-origin: left center; }
+.mark.tr::before, .mark.br::before { transform-origin: right center; }
+.mark::after { transform-origin: center top; }
+.mark.bl::after, .mark.br::after { transform-origin: center bottom; }
+@media (prefers-reduced-motion: no-preference) {
+  .mark::before { animation: drawX .55s cubic-bezier(.2,.7,.2,1) both; }
+  .mark::after { animation: drawY .55s cubic-bezier(.2,.7,.2,1) both; }
+  .mark.tr::before, .mark.tr::after { animation-delay: .12s; }
+  .mark.br::before, .mark.br::after { animation-delay: .24s; }
+  .mark.bl::before, .mark.bl::after { animation-delay: .36s; }
+}
+@keyframes drawX { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+@keyframes drawY { from { transform: scaleY(0); } to { transform: scaleY(1); } }
+.portrait figcaption {
+  margin-top: 14px; display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap;
+}
+
+/* ---------- sections ---------- */
+main section { padding-block: 72px; border-bottom: 1px solid var(--rule); }
+main section:last-of-type { border-bottom: 0; }
+.sec-head { display: grid; gap: 10px; margin-bottom: 36px; }
+.sec-title { display: flex; align-items: center; gap: 14px; margin: 0; }
+.datum {
+  flex: none; display: inline-grid; place-items: center;
+  width: 30px; height: 30px; border: 1.5px solid var(--accent);
+  font-family: var(--f-mono); font-size: .875rem; font-weight: 500; color: var(--accent-ink);
+  position: relative;
+}
+.datum::after { /* the datum triangle on its leader */
+  content: ""; position: absolute; left: 50%; bottom: -9px; transform: translateX(-50%);
+  border-left: 5px solid transparent; border-right: 5px solid transparent; border-top: 8px solid var(--accent);
+}
+.sec-title h2 {
+  margin: 0; font-family: var(--f-display); font-weight: 600; font-size: var(--s-h2);
+  line-height: 1.05; text-wrap: balance;
+}
+.sec-intro { margin: 4px 0 0; max-width: 64ch; color: var(--ink-2); }
+
+/* ---------- research chain ---------- */
+.chain { list-style: none; margin: 0; padding: 0; display: grid; gap: 28px; counter-reset: stage; }
+@media (min-width: 1000px) { .chain { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0; } }
+.stage {
+  position: relative; min-width: 0; padding: 22px 22px 24px;
+  border: 1px solid var(--rule); background: var(--sheet);
+  display: grid; gap: 12px; align-content: start;
+}
+@media (min-width: 1000px) {
+  .stage + .stage { border-left: 0; }
+}
+.stage-top { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; }
+.stage-num { font-family: var(--f-mono); font-size: .8125rem; color: var(--accent-ink); font-weight: 500; }
+.stage h3 {
+  margin: 0; font-family: var(--f-display); font-size: 1.75rem; font-weight: 600;
+  text-transform: uppercase; letter-spacing: .02em; line-height: 1;
+}
+.stage .q { margin: 0; font-style: italic; color: var(--ink-2); }
+.stage .tags { display: flex; flex-wrap: wrap; gap: 6px; margin: 2px 0 0; padding: 0; list-style: none; }
+.stage .tags li {
+  font-family: var(--f-mono); font-size: .75rem; padding: 3px 8px;
+  border: 1px solid var(--accent); color: var(--accent-ink); border-radius: 2px;
+}
+.stage .did { margin: 4px 0 0; padding: 12px 0 0; border-top: 1px dashed var(--rule); list-style: none; display: grid; gap: 8px; }
+.stage .did li { font-size: var(--s-small); color: var(--ink-2); padding-left: 16px; position: relative; }
+.stage .did li::before { content: ""; position: absolute; left: 0; top: .62em; width: 8px; height: 1px; background: var(--ink-2); }
+/* arrows between stages */
+.stage:not(:last-child)::after {
+  content: ""; position: absolute; z-index: 2;
+  left: 50%; bottom: -22px; transform: translateX(-50%);
+  border-left: 7px solid transparent; border-right: 7px solid transparent; border-top: 11px solid var(--accent);
+}
+@media (min-width: 1000px) {
+  .stage:not(:last-child)::after {
+    left: auto; right: -7px; bottom: auto; top: 30px; transform: none;
+    border-top: 7px solid transparent; border-bottom: 7px solid transparent; border-left: 11px solid var(--accent); border-right: 0;
+  }
+}
+
+/* ---------- timelines (education, experience, honors) ---------- */
+.group-label { margin: 0 0 14px; }
+.group + .group { margin-top: 48px; }
+.rows { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--ink); }
+.row {
+  display: grid; gap: 6px 32px; padding: 26px 0 28px; border-bottom: 1px solid var(--rule);
+  grid-template-columns: 1fr; position: relative;
+}
+@media (min-width: 760px) {
+  .row { grid-template-columns: 11rem minmax(0, 1fr) auto; }
+}
+.row::before {
+  content: ""; position: absolute; left: 0; top: -1px; width: 0; height: 2px; background: var(--accent);
+  transition: width .3s ease;
+}
+.row:hover::before { width: 11rem; }
+@media (prefers-reduced-motion: reduce) { .row::before { transition: none; } }
+.when { font-family: var(--f-mono); font-size: .8125rem; color: var(--muted); padding-top: 4px; font-variant-numeric: tabular-nums; }
+.when strong { display: block; color: var(--ink); font-weight: 500; }
+.what { min-width: 0; }
+.what h3 { margin: 0; font-size: var(--s-h3); font-weight: 600; line-height: 1.3; }
+.where { margin: 2px 0 0; color: var(--ink-2); }
+.where a { text-decoration-color: var(--accent); text-underline-offset: 3px; }
+.meta-line { margin: 8px 0 0; font-size: var(--s-small); color: var(--ink-2); }
+.meta-line b { font-weight: 600; color: var(--ink); }
+.bullets { margin: 12px 0 0; padding: 0; list-style: none; display: grid; gap: 6px; max-width: 70ch; }
+.bullets li { padding-left: 18px; position: relative; color: var(--ink-2); font-size: var(--s-small); }
+.bullets li::before { content: ""; position: absolute; left: 2px; top: .6em; width: 6px; height: 6px; border: 1.5px solid var(--accent); }
+.badge {
+  display: none; width: 64px; height: 64px; place-items: center; align-self: start;
+  border: 1px solid var(--rule); background: var(--sheet);
+  font-family: var(--f-display); font-weight: 700; font-size: 1.25rem; letter-spacing: .04em; color: var(--ink-2);
+}
+@media (min-width: 760px) { .badge { display: grid; } }
+.course { margin: 14px 0 0; display: flex; flex-wrap: wrap; gap: 6px; padding: 0; list-style: none; }
+.course li { font-size: .8125rem; padding: 2px 8px; border: 1px solid var(--rule); border-radius: 2px; color: var(--ink-2); background: var(--sheet); }
+
+/* ---------- publications ---------- */
+.pubs { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--ink); }
+.pub {
+  display: grid; gap: 10px 32px; padding: 28px 0; border-bottom: 1px solid var(--rule);
+  grid-template-columns: 1fr;
+}
+@media (min-width: 760px) { .pub { grid-template-columns: 11rem minmax(0, 1fr); } }
+.pub-meta { display: flex; flex-direction: column; gap: 8px; align-items: flex-start; }
+.status {
+  font-family: var(--f-mono); font-size: .6875rem; letter-spacing: .08em; text-transform: uppercase;
+  padding: 3px 8px; border-radius: 2px; border: 1px solid var(--accent);
+}
+.status.done { background: var(--accent); color: var(--on-accent); }
+.status.wip { color: var(--accent-ink); border-style: dashed; }
+.pub h3 { margin: 0; font-family: var(--f-display); font-weight: 600; font-size: 1.6rem; line-height: 1.12; text-wrap: balance; max-width: 34ch; }
+.authors { margin: 8px 0 0; color: var(--ink-2); font-size: var(--s-small); }
+.authors b { color: var(--ink); font-weight: 600; }
+.venue { margin: 4px 0 0; font-size: var(--s-small); font-style: italic; color: var(--muted); }
+
+/* ---------- toolkit ---------- */
+.kit { display: grid; gap: 0; grid-template-columns: 1fr; border-top: 1px solid var(--rule); border-left: 1px solid var(--rule); }
+@media (min-width: 620px) { .kit { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 1000px) { .kit { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+.kit-cell { padding: 22px 22px 24px; border-right: 1px solid var(--rule); border-bottom: 1px solid var(--rule); background: var(--sheet); min-width: 0; }
+.kit-cell h3 { margin: 0 0 12px; font-size: 1.0625rem; font-weight: 600; }
+.kit-cell ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px; }
+.kit-cell li { font-size: .875rem; padding: 4px 10px; border: 1px solid var(--rule); border-radius: 2px; background: var(--paper); }
+
+/* ---------- contact ---------- */
+.contact { display: grid; gap: 36px; grid-template-columns: 1fr; }
+@media (min-width: 900px) { .contact { grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 64px; align-items: start; } }
+.contact h3 { font-family: var(--f-display); font-weight: 500; font-size: var(--s-thesis); line-height: 1.12; margin: 0; max-width: 20ch; text-wrap: balance; }
+.contact p { margin: 16px 0 0; max-width: 56ch; color: var(--ink-2); }
+.open-to { list-style: none; margin: 20px 0 0; padding: 0; display: grid; gap: 8px; }
+.open-to li { display: flex; gap: 10px; align-items: baseline; color: var(--ink-2); }
+.open-to li::before { content: "+"; font-family: var(--f-mono); color: var(--accent-ink); font-weight: 500; }
+.reach { border: 1px solid var(--rule); background: var(--sheet); }
+.reach-row { display: grid; gap: 6px; padding: 16px 18px; border-bottom: 1px solid var(--rule); }
+.reach-row:last-child { border-bottom: 0; }
+.reach-line { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+.reach-val { font-family: var(--f-mono); font-size: .9375rem; overflow-wrap: anywhere; min-width: 0; }
+.reach-val a { text-decoration-color: var(--accent); text-underline-offset: 3px; }
+.copy-btn {
+  font-family: var(--f-mono); font-size: var(--s-label); letter-spacing: .08em; text-transform: uppercase;
+  padding: 6px 10px; border: 1px solid var(--rule); background: transparent; color: var(--ink); cursor: pointer; border-radius: 2px;
+}
+.copy-btn:hover { border-color: var(--ink); }
+
+/* ---------- title block footer ---------- */
+.title-block-wrap { padding-block: 40px 48px; border-top: 1px solid var(--rule);
+  background-image: linear-gradient(var(--grid) 1px, transparent 1px), linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+.title-block {
+  margin-left: auto; max-width: 720px; border: 2px solid var(--ink); background: var(--sheet);
+  display: grid; grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+@media (min-width: 640px) { .title-block { grid-template-columns: 2fr 1fr 1fr; } }
+.tb { padding: 10px 14px 12px; border-right: 1px solid var(--ink); border-bottom: 1px solid var(--ink); min-width: 0; display: grid; gap: 2px; }
+.tb .label { font-size: .625rem; }
+.tb .v { font-family: var(--f-mono); font-size: .8125rem; font-weight: 500; overflow-wrap: anywhere; }
+.tb.big .v { font-family: var(--f-display); font-size: 1.5rem; font-weight: 600; text-transform: uppercase; letter-spacing: .02em; line-height: 1.1; }
+.tb.span-all { grid-column: 1 / -1; }
+@media (min-width: 640px) {
+  .tb:nth-child(3n+4) { border-right: 0; }
+  .tb.span-all { border-right: 0; }
+  .tb.last-row { border-bottom: 0; }
+}
+@media (max-width: 639px) {
+  .tb:nth-child(2n+3) { border-right: 0; }
+  .tb.span-all { border-right: 0; }
+  .tb.m-last { border-bottom: 0; }
+}
+.fine { margin-top: 18px; text-align: right; }
+</style>
+</head>
+<body>
+<a class="skip" href="#research">Skip to content</a>
+
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Noubhar Ahmad, back to top"><span class="tick" aria-hidden="true"></span><span class="full">N. Ahmad</span></a>
+    <nav class="nav" aria-label="Sections">
+      <ul>
+        <li><a href="#research">Research</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#toolkit">Toolkit</a></li>
+        <li><a href="#honors">Honors</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <button class="theme-btn" id="theme-toggle" type="button" aria-label="Switch color theme"><span class="swatch" aria-hidden="true"></span><span id="theme-label">Blueprint</span></button>
+  </div>
+</header>
+
+<div class="hero" id="top">
+  <div class="wrap">
+    <div class="hero-text">
+      <div class="role label">
+        <span>MSc candidate</span><span class="dot" aria-hidden="true"></span>
+        <span>Mechanical Engineering</span><span class="dot" aria-hidden="true"></span>
+        <span>Clemson University</span>
+      </div>
+      <h1 class="name">Noubhar<br>Ahmad</h1>
+      <p class="thesis">How a part is <em>made</em> decides how it <em>performs</em>.</p>
+      <p class="lede">I'm a master's student in Mechanical Engineering at Clemson University, advised by <a href="https://cecas.clemson.edu/~rodrigm/about/" target="_blank" rel="noopener">Dr.&nbsp;Rodrigo Martinez-Duarte</a> in the Multiscale Manufacturing Laboratory. I work where manufacturing processes meet material behavior: additive manufacturing, stimuli-responsive metamaterials, and the testing that shows whether a process did its job. Before Clemson, I spent two years as a mechanical engineer designing engine components and characterizing alloy steels.</p>
+
+      <dl class="spec">
+        <dt class="label">Program</dt><dd>MSc, Mechanical Engineering, Clemson University</dd>
+        <dt class="label">Advisor</dt><dd><a href="https://cecas.clemson.edu/~rodrigm/about/" target="_blank" rel="noopener">Dr. Rodrigo Martinez-Duarte</a></dd>
+        <dt class="label">Lab</dt><dd><a href="https://cecas.clemson.edu/~rodrigm/" target="_blank" rel="noopener">Multiscale Manufacturing Laboratory (M²L)</a></dd>
+        <dt class="label">Focus</dt><dd>Additive manufacturing · Metamaterials · Process optimization</dd>
+        <dt class="label">Expected</dt><dd>May 2028</dd>
+        <dt class="label">Email</dt><dd>engrnoubhar@gmail.com</dd>
+      </dl>
+
+      <div class="actions">
+        <a class="btn btn-primary" href="assets/cv.pdf" target="_blank" rel="noopener">
+          <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 1.5h5.5L13 5v9.5H4z" stroke="currentColor" stroke-width="1.4"/><path d="M9 1.5V5.5h4" stroke="currentColor" stroke-width="1.4"/></svg>
+          Curriculum vitae
+        </a>
+        <a class="btn btn-ghost" href="#contact">Get in touch</a>
+      </div>
+    </div>
+
+    <figure class="portrait">
+      <span class="mark tl" aria-hidden="true"></span><span class="mark tr" aria-hidden="true"></span>
+      <span class="mark bl" aria-hidden="true"></span><span class="mark br" aria-hidden="true"></span>
+      <div class="frame">
+        <img src="assets/headshot.jpg" width="1000" height="1250" alt="Portrait of Noubhar Ahmad, smiling, in a black hoodie against a grey studio backdrop.">
+      </div>
+      <figcaption class="label"><span>Fig. 1</span><span>Noubhar Ahmad</span></figcaption>
+    </figure>
+  </div>
+</div>
+
+<main>
+  <!-- A: research -->
+  <section id="research" aria-labelledby="h-research">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="label">Research interests · 4 linked stages</span>
+        <div class="sec-title"><span class="datum" aria-hidden="true">A</span><h2 id="h-research">From process to performance</h2></div>
+        <p class="sec-intro">Materials engineers think in a chain: processing sets structure, structure sets properties, and properties set performance. My interests follow that chain, and so does most of the work I've done so far.</p>
+      </div>
+      <ol class="chain">
+        <li class="stage">
+          <div class="stage-top"><h3>Process</h3><span class="stage-num">01</span></div>
+          <p class="q">How is it made?</p>
+          <ul class="tags"><li>Additive manufacturing</li><li>Process optimization</li><li>Intelligent process control</li></ul>
+          <ul class="did">
+            <li>Built an FDM 3D printer for my senior thesis</li>
+            <li>Prototyped JF-17 ventral fins by directed energy deposition</li>
+          </ul>
+        </li>
+        <li class="stage">
+          <div class="stage-top"><h3>Structure</h3><span class="stage-num">02</span></div>
+          <p class="q">What forms inside it?</p>
+          <ul class="tags"><li>Microstructure</li><li>Metamaterial architecture</li></ul>
+          <ul class="did">
+            <li>Layer adhesion and porosity in FDM-printed parts</li>
+            <li>Metallography of H13 and 42CrMo4 steels</li>
+          </ul>
+        </li>
+        <li class="stage">
+          <div class="stage-top"><h3>Property</h3><span class="stage-num">03</span></div>
+          <p class="q">How does it respond to load and heat?</p>
+          <ul class="tags"><li>Material characterization</li></ul>
+          <ul class="did">
+            <li>Tensile, bend, torsion, compression and hardness testing</li>
+            <li>OES chemical analysis and SEM</li>
+            <li>Thermal simulation of steel and aluminum in ANSYS</li>
+          </ul>
+        </li>
+        <li class="stage">
+          <div class="stage-top"><h3>Performance</h3><span class="stage-num">04</span></div>
+          <p class="q">What can it do in service?</p>
+          <ul class="tags"><li>Stimuli-responsive 4D printing</li><li>Component design</li></ul>
+          <ul class="did">
+            <li>Review of 4D-printed metamaterials, in preparation</li>
+            <li>Engine parts: rocker covers, cylinder heads, pistons</li>
+            <li>Stress and fracture at gear-tooth roots and shaft necks</li>
+          </ul>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- B: education -->
+  <section id="education" aria-labelledby="h-education">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="label">2 degrees · 2019 to 2028</span>
+        <div class="sec-title"><span class="datum" aria-hidden="true">B</span><h2 id="h-education">Education</h2></div>
+      </div>
+      <ol class="rows">
+        <li class="row">
+          <div class="when"><strong>Aug 2026 – now</strong>Expected May 2028</div>
+          <div class="what">
+            <h3>MSc, Mechanical Engineering</h3>
+            <p class="where">Clemson University · Clemson, South Carolina</p>
+            <p class="meta-line"><b>Advisor:</b> <a href="https://cecas.clemson.edu/~rodrigm/about/" target="_blank" rel="noopener">Dr. Rodrigo Martinez-Duarte</a>, Multiscale Manufacturing Laboratory</p>
+            <ul class="course" aria-label="Clemson coursework">
+              <li>Advanced Design Methodologies</li><li>Design and Manufacturing</li><li>Laser-Based Additive Manufacturing</li><li>Engineering Optimization</li><li>Material Selection in Manufacturing Processes</li>
+            </ul>
+          </div>
+          <div class="badge" aria-hidden="true">CU</div>
+        </li>
+        <li class="row">
+          <div class="when"><strong>Sep 2019 – May 2023</strong>Lahore, Pakistan</div>
+          <div class="what">
+            <h3>BSc, Mechanical Engineering</h3>
+            <p class="where">University of Engineering and Technology (UET), Lahore</p>
+            <p class="meta-line"><b>Senior thesis:</b> Fabrication of a 3D printer and design optimization of 3D-printed parts for digital manufacturing</p>
+            <ul class="course" aria-label="UET coursework">
+              <li>Industrial Materials</li><li>Design and Manufacturing</li><li>Mechanics of Materials</li><li>Advanced Mechanics of Materials</li><li>Finite Element Analysis</li><li>Additive Manufacturing</li><li>Material Characterization</li><li>3D Printing</li>
+            </ul>
+          </div>
+          <div class="badge" aria-hidden="true">UET</div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- C: experience -->
+  <section id="experience" aria-labelledby="h-experience">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="label">2 research roles · 4 industry roles</span>
+        <div class="sec-title"><span class="datum" aria-hidden="true">C</span><h2 id="h-experience">Experience</h2></div>
+      </div>
+
+      <div class="group">
+        <p class="label group-label">Research</p>
+        <ol class="rows">
+          <li class="row">
+            <div class="when"><strong>Aug 2026 – now</strong>Clemson, SC</div>
+            <div class="what">
+              <h3>Graduate Student Researcher</h3>
+              <p class="where"><a href="https://cecas.clemson.edu/~rodrigm/" target="_blank" rel="noopener">Multiscale Manufacturing Laboratory (M²L)</a> · Clemson University</p>
+              <p class="meta-line">Master's research under Dr. Rodrigo Martinez-Duarte, whose lab develops manufacturing processes for healthcare, environmental monitoring and energy.</p>
+            </div>
+            <div class="badge" aria-hidden="true">M²L</div>
+          </li>
+          <li class="row">
+            <div class="when"><strong>2021 – 2022</strong>Lahore, Pakistan</div>
+            <div class="what">
+              <h3>Undergraduate Research Assistant</h3>
+              <p class="where">Department of Mechanical Engineering · UET Lahore</p>
+              <ul class="bullets">
+                <li>Designed gears and shafts in CAD and analyzed stress distribution and fracture risk at gear-tooth roots and shaft necks.</li>
+                <li>Characterized polymers, biomaterials and ceramics through tensile, bending and torsion testing.</li>
+                <li>Led a group of four students through literature reviews.</li>
+              </ul>
+            </div>
+            <div class="badge" aria-hidden="true">UET</div>
+          </li>
+        </ol>
+      </div>
+
+      <div class="group">
+        <p class="label group-label">Industry</p>
+        <ol class="rows">
+          <li class="row">
+            <div class="when"><strong>Sep 2023 – Oct 2025</strong>Lahore, Pakistan</div>
+            <div class="what">
+              <h3>Mechanical Engineer</h3>
+              <p class="where">Mace Engineering Technologies</p>
+              <ul class="bullets">
+                <li>Investigated microstructure (layer adhesion, porosity) and mechanical properties of FDM-printed parts.</li>
+                <li>Designed automotive engine components, including rocker covers, cylinder heads and pistons.</li>
+                <li>Determined the chemical composition of H13 and 42CrMo4 steels by optical emission spectrometry (OES), and prepared and analyzed their microstructures.</li>
+                <li>Ran ANSYS simulations of the thermal behavior of steel and aluminum.</li>
+                <li>Presented test and research results in weekly meetings with management.</li>
+              </ul>
+            </div>
+            <div class="badge" aria-hidden="true">MET</div>
+          </li>
+          <li class="row">
+            <div class="when"><strong>Summer 2022</strong>Kamra, Pakistan</div>
+            <div class="what">
+              <h3>Summer Intern</h3>
+              <p class="where">Pakistan Aeronautical Complex</p>
+              <ul class="bullets">
+                <li>Designed and simulated twin ventral fins for the JF-17 aircraft.</li>
+                <li>Characterized Ti-6Al-4V alloy.</li>
+                <li>Built fin prototypes by directed energy deposition (DED) additive manufacturing.</li>
+              </ul>
+            </div>
+            <div class="badge" aria-hidden="true">PAC</div>
+          </li>
+          <li class="row">
+            <div class="when"><strong>Summer 2022</strong>Taxila, Pakistan</div>
+            <div class="what">
+              <h3>Summer Intern</h3>
+              <p class="where">Heavy Mechanical Complex</p>
+              <ul class="bullets">
+                <li>Ran tensile, bend and compressive strength tests on refractory materials.</li>
+                <li>Investigated surface-finish defects in cast metals.</li>
+              </ul>
+            </div>
+            <div class="badge" aria-hidden="true">HMC</div>
+          </li>
+          <li class="row">
+            <div class="when"><strong>Summer 2021</strong>Lahore, Pakistan</div>
+            <div class="what">
+              <h3>Manufacturing Intern</h3>
+              <p class="where">Pakistan Railways</p>
+              <ul class="bullets">
+                <li>Learned CNC machining, casting and forging on the shop floor.</li>
+                <li>Worked on locomotive body manufacturing, fabrication and welding.</li>
+              </ul>
+            </div>
+            <div class="badge" aria-hidden="true">PR</div>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- D: publications -->
+  <section id="publications" aria-labelledby="h-publications">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="label">1 published · 1 in preparation</span>
+        <div class="sec-title"><span class="datum" aria-hidden="true">D</span><h2 id="h-publications">Publications</h2></div>
+      </div>
+      <ol class="pubs">
+        <li class="pub">
+          <div class="pub-meta">
+            <span class="status wip">In preparation</span>
+            <span class="label">Review · 2025</span>
+          </div>
+          <div>
+            <h3>Stimuli-Responsive 4D-Printed Metamaterials: Materials, Design, Mechanisms, and Multifunctional Applications</h3>
+            <p class="authors"><b>Noubhar A.*</b>, Shafahat A.</p>
+          </div>
+        </li>
+        <li class="pub">
+          <div class="pub-meta">
+            <span class="status done">Published</span>
+            <span class="label">Journal · 2023–24</span>
+          </div>
+          <div>
+            <h3>Fabrication of 3D Printer &amp; Design Optimization of 3D Printed Parts for Digital Manufacturing</h3>
+            <p class="authors">Tayyab S., Umair S., Abu T., <b>Noubhar A.*</b>, Saboor Z., Faris I.</p>
+            <p class="venue">IJESIR Novus</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- E: toolkit -->
+  <section id="toolkit" aria-labelledby="h-toolkit">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="label">Tools, tests, processes and materials</span>
+        <div class="sec-title"><span class="datum" aria-hidden="true">E</span><h2 id="h-toolkit">The toolkit</h2></div>
+      </div>
+      <div class="kit">
+        <div class="kit-cell"><h3>Design</h3><ul><li>SolidWorks</li><li>Component design</li><li>Design optimization</li></ul></div>
+        <div class="kit-cell"><h3>Simulation &amp; computing</h3><ul><li>ANSYS</li><li>Finite element analysis</li><li>MATLAB</li></ul></div>
+        <div class="kit-cell"><h3>Mechanical testing</h3><ul><li>Tensile</li><li>Bend</li><li>Compression</li><li>Torsion</li><li>Hardness</li></ul></div>
+        <div class="kit-cell"><h3>Characterization</h3><ul><li>OES</li><li>SEM</li><li>Metallography</li><li>Microstructure analysis</li></ul></div>
+        <div class="kit-cell"><h3>Manufacturing processes</h3><ul><li>FDM</li><li>DED</li><li>CNC machining</li><li>Casting</li><li>Forging</li><li>Welding</li></ul></div>
+        <div class="kit-cell"><h3>Materials on the bench</h3><ul><li>H13 steel</li><li>42CrMo4 steel</li><li>Ti-6Al-4V</li><li>Aluminum</li><li>Polymers</li><li>Ceramics</li><li>Refractories</li></ul></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- F: honors -->
+  <section id="honors" aria-labelledby="h-honors">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="label">Awards, hackathons and service</span>
+        <div class="sec-title"><span class="datum" aria-hidden="true">F</span><h2 id="h-honors">Honors &amp; activities</h2></div>
+      </div>
+      <ol class="rows">
+        <li class="row">
+          <div class="when"><strong>2025 – 2026</strong>Gliwice, Poland</div>
+          <div class="what">
+            <h3>Fully funded participant, HI-EURECA-PRO Industrial Hackathon</h3>
+            <p class="where">Erasmus+ hackathon on life cycle assessment of sustainable materials · Silesian University of Technology</p>
+            <ul class="bullets">
+              <li>Analyzed a research article on the life cycle assessment (LCA) of additive manufacturing and reported the findings.</li>
+              <li>Completed a course on LCA and a workshop on sustainable materials.</li>
+            </ul>
+          </div>
+          <div class="badge" aria-hidden="true">LCA</div>
+        </li>
+        <li class="row">
+          <div class="when"><strong>2022 – 2023</strong>Lahore, Pakistan</div>
+          <div class="what">
+            <h3>Award of Recognition for Services as President</h3>
+            <p class="where">ASME student chapter · UET Lahore</p>
+          </div>
+          <div class="badge" aria-hidden="true">ASME</div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- G: contact -->
+  <section id="contact" aria-labelledby="h-contact">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="label">Get in touch</span>
+        <div class="sec-title"><span class="datum" aria-hidden="true">G</span><h2 id="h-contact">Contact</h2></div>
+      </div>
+      <div class="contact">
+        <div>
+          <h3>Let's talk about how things get made.</h3>
+          <p>If you work on additive manufacturing, metamaterials or process control, or you have a question about my research, email is the quickest way to reach me.</p>
+          <ul class="open-to">
+            <li>Open to research collaborations</li>
+            <li>Open to internship and co-op conversations</li>
+            <li>Happy to hear feedback on my work</li>
+          </ul>
+        </div>
+        <div class="reach">
+          <div class="reach-row">
+            <span class="label">Email</span>
+            <div class="reach-line">
+              <span class="reach-val" id="email-text"><a href="mailto:engrnoubhar@gmail.com">engrnoubhar@gmail.com</a></span>
+              <button class="copy-btn" id="copy-email" type="button">Copy</button>
+            </div>
+          </div>
+          <div class="reach-row">
+            <span class="label">LinkedIn</span>
+            <span class="reach-val"><a href="https://www.linkedin.com/in/noubhar-ahmad" target="_blank" rel="noopener">linkedin.com/in/noubhar-ahmad</a></span>
+          </div>
+          <div class="reach-row">
+            <span class="label">Lab</span>
+            <span class="reach-val"><a href="https://cecas.clemson.edu/~rodrigm/" target="_blank" rel="noopener">Multiscale Manufacturing Lab, Clemson</a></span>
+          </div>
+          <div class="reach-row">
+            <span class="label">CV</span>
+            <span class="reach-val"><a href="assets/cv.pdf" target="_blank" rel="noopener">cv.pdf</a></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="title-block-wrap">
+  <div class="wrap">
+    <div class="title-block" role="contentinfo">
+      <div class="tb big span-all"><span class="label">Title</span><span class="v">Noubhar Ahmad · Portfolio</span></div>
+      <div class="tb"><span class="label">Department</span><span class="v">Mechanical Engineering, Clemson University</span></div>
+      <div class="tb"><span class="label">Drawn by</span><span class="v">N. Ahmad</span></div>
+      <div class="tb"><span class="label">Revised</span><span class="v">Nov 2026</span></div>
+      <div class="tb last-row"><span class="label">Laboratory</span><span class="v">Multiscale Manufacturing Lab (M²L)</span></div>
+      <div class="tb last-row m-last"><span class="label">Scale</span><span class="v">1 : 1</span></div>
+      <div class="tb last-row m-last"><span class="label">Sheet</span><span class="v">1 of 1</span></div>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var root = document.documentElement;
+  var btn = document.getElementById('theme-toggle');
+  var label = document.getElementById('theme-label');
+  var mq = window.matchMedia ? window.matchMedia('(prefers-color-scheme: dark)') : null;
+
+  function stored() { try { return localStorage.getItem('na-theme'); } catch (e) { return null; } }
+  function store(v) { try { localStorage.setItem('na-theme', v); } catch (e) {} }
+  function isDark() {
+    var t = root.getAttribute('data-theme');
+    if (t) return t === 'dark';
+    return !!(mq && mq.matches);
+  }
+  function sync() { label.textContent = isDark() ? 'Vellum' : 'Blueprint'; }
+
+  var s = stored();
+  if (s === 'dark' || s === 'light') root.setAttribute('data-theme', s);
+  sync();
+  if (mq && mq.addEventListener) mq.addEventListener('change', sync);
+  btn.addEventListener('click', function () {
+    var next = isDark() ? 'light' : 'dark';
+    root.setAttribute('data-theme', next); store(next); sync();
+  });
+
+  // copy email
+  var copyBtn = document.getElementById('copy-email');
+  var email = 'engrnoubhar@gmail.com';
+  copyBtn.addEventListener('click', function () {
+    function done(msg) { copyBtn.textContent = msg; setTimeout(function () { copyBtn.textContent = 'Copy'; }, 1800); }
+    function fallback() {
+      var el = document.getElementById('email-text');
+      var r = document.createRange(); r.selectNodeContents(el);
+      var sel = window.getSelection(); sel.removeAllRanges(); sel.addRange(r);
+      done('Selected');
+    }
+    try {
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(email).then(function () { done('Copied'); }, fallback);
+      } else { fallback(); }
+    } catch (e) { fallback(); }
+  });
+
+  // highlight the section in view
+  var links = Array.prototype.slice.call(document.querySelectorAll('.nav a'));
+  if ('IntersectionObserver' in window) {
+    var map = {};
+    links.forEach(function (a) { map[a.getAttribute('href').slice(1)] = a; });
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (en.isIntersecting) {
+          links.forEach(function (a) { a.classList.remove('is-active'); });
+          var a = map[en.target.id];
+          if (a) {
+            a.classList.add('is-active');
+            if (a.scrollIntoView && window.innerWidth < 720) {
+              var nav = a.closest('.nav');
+              if (nav) nav.scrollLeft = a.offsetLeft - 16;
+            }
+          }
+        }
+      });
+    }, { rootMargin: '-45% 0px -50% 0px' });
+    document.querySelectorAll('main section[id]').forEach(function (s) { io.observe(s); });
+  }
+})();
+</script>
+</body>
+</html>
