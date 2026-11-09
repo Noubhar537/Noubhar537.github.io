@@ -7,7 +7,7 @@
 <meta property="og:title" content="Noubhar Ahmad | MSc Candidate, Mechanical Engineering">
 <meta property="og:description" content="Additive manufacturing, metamaterials and process optimization at Clemson University's Multiscale Manufacturing Laboratory.">
 <meta property="og:type" content="website">
-<meta name="theme-color" content="#EFF3F4">
+<meta name="theme-color" content="#FAF9FC">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='7' y='7' width='18' height='18' transform='rotate(45 16 16)' fill='none' stroke='%23F56600' stroke-width='4'/%3E%3C/svg%3E">
 <style>body{margin:0}img{max-width:100%}[hidden]{display:none!important}:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}</style>
 <meta name="description" content="Noubhar Ahmad is an MSc candidate in Mechanical Engineering at Clemson University, working in the Multiscale Manufacturing Laboratory with Dr. Rodrigo Martinez-Duarte on additive manufacturing, metamaterials and process optimization.">
@@ -15,23 +15,28 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <style>
-/* Layout: an engineering drawing sheet. Vellum by day, blueprint by night.
-   Sections are datum-lettered; the footer is the drawing's title block. */
+/* Layout: clean single column of sections on off-white, Clemson orange + Regalia purple accents.
+   Purple carries structure (links, buttons, rules); orange marks emphasis. */
 :root {
-  --paper: #EFF3F4;
-  --sheet: #F8FAFA;
-  --ink: #132230;
-  --ink-2: #3B4D5C;
-  --muted: #677987;
-  --rule: #CBD5DB;
-  --grid: rgba(19, 34, 48, .055);
-  --grid-major: rgba(19, 34, 48, .085);
+  --paper: #FAF9FC;
+  --sheet: #FFFFFF;
+  --ink: #1F1529;
+  --ink-2: #4B4256;
+  --muted: #776D82;
+  --rule: #E3DEEA;
   --accent: #F56600;        /* Clemson orange: marks, fills */
-  --accent-ink: #B34800;    /* orange that passes as text on paper */
-  --btn-bg: #132230;
-  --btn-fg: #F8FAFA;
-  --header-bg: rgba(239, 243, 244, .9);
-  --on-accent: #132230;
+  --accent-ink: #B34800;    /* orange that passes as text */
+  --purple: #522D80;        /* Regalia: fills, rules */
+  --purple-ink: #522D80;    /* purple as text */
+  --purple-tint: #F1ECF7;
+  --btn-bg: #522D80;
+  --btn-fg: #FFFFFF;
+  --on-accent: #1F1529;
+  --header-bg: rgba(250, 249, 252, .92);
+  --footer-bg: #522D80;
+  --footer-fg: #FFFFFF;
+  --footer-muted: #D9CCEA;
+  --photo-back: #E7DEF2;
 
   --f-display: "Barlow Condensed", "Arial Narrow", "Roboto Condensed", sans-serif;
   --f-body: "Barlow", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
@@ -49,36 +54,48 @@
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --paper: #0B2340;
-    --sheet: #0F2B4C;
-    --ink: #E7F0F7;
-    --ink-2: #B7CADA;
-    --muted: #88A3B9;
-    --rule: #2A4B6D;
-    --grid: rgba(186, 218, 245, .06);
-    --grid-major: rgba(186, 218, 245, .1);
+    --paper: #140E1C;
+    --sheet: #1C1428;
+    --ink: #F3EFF8;
+    --ink-2: #CEC5DA;
+    --muted: #9F93AE;
+    --rule: #342848;
     --accent: #FF7A26;
     --accent-ink: #FF9C5C;
-    --btn-bg: #E7F0F7;
-    --btn-fg: #0B2340;
-    --header-bg: rgba(11, 35, 64, .9);
+    --purple: #7E52BD;
+    --purple-ink: #C4A8EC;
+    --purple-tint: #261A38;
+    --btn-bg: #7E52BD;
+    --btn-fg: #FFFFFF;
+    --on-accent: #1F1529;
+    --header-bg: rgba(20, 14, 28, .92);
+    --footer-bg: #24173A;
+    --footer-fg: #F3EFF8;
+    --footer-muted: #B7A7CF;
+    --photo-back: #2E1F47;
     color-scheme: dark;
   }
 }
 :root[data-theme="dark"] {
-  --paper: #0B2340;
-  --sheet: #0F2B4C;
-  --ink: #E7F0F7;
-  --ink-2: #B7CADA;
-  --muted: #88A3B9;
-  --rule: #2A4B6D;
-  --grid: rgba(186, 218, 245, .06);
-  --grid-major: rgba(186, 218, 245, .1);
+  --paper: #140E1C;
+  --sheet: #1C1428;
+  --ink: #F3EFF8;
+  --ink-2: #CEC5DA;
+  --muted: #9F93AE;
+  --rule: #342848;
   --accent: #FF7A26;
   --accent-ink: #FF9C5C;
-  --btn-bg: #E7F0F7;
-  --btn-fg: #0B2340;
-  --header-bg: rgba(11, 35, 64, .9);
+  --purple: #7E52BD;
+  --purple-ink: #C4A8EC;
+  --purple-tint: #261A38;
+  --btn-bg: #7E52BD;
+  --btn-fg: #FFFFFF;
+  --on-accent: #1F1529;
+  --header-bg: rgba(20, 14, 28, .92);
+  --footer-bg: #24173A;
+  --footer-fg: #F3EFF8;
+  --footer-muted: #B7A7CF;
+  --photo-back: #2E1F47;
   color-scheme: dark;
 }
 
@@ -128,7 +145,7 @@ a:focus-visible, button:focus-visible {
 /* ---------- header ---------- */
 .site-head {
   position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20;
-  background: var(--header-bg);
+  background: var(--header-bg); border-top: 3px solid var(--accent);
   backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
   border-bottom: 1px solid var(--rule);
 }
@@ -171,14 +188,7 @@ a:focus-visible, button:focus-visible {
 /* ---------- hero ---------- */
 .hero {
   position: relative;
-  background-color: var(--paper);
-  background-image:
-    linear-gradient(var(--grid-major) 1px, transparent 1px),
-    linear-gradient(90deg, var(--grid-major) 1px, transparent 1px),
-    linear-gradient(var(--grid) 1px, transparent 1px),
-    linear-gradient(90deg, var(--grid) 1px, transparent 1px);
-  background-size: 120px 120px, 120px 120px, 24px 24px, 24px 24px;
-  background-position: -1px -1px;
+  background: var(--paper);
   border-bottom: 1px solid var(--rule);
 }
 .hero .wrap {
@@ -200,8 +210,9 @@ a:focus-visible, button:focus-visible {
   line-height: 1.12; margin: 6px 0 0; max-width: 22ch; text-wrap: balance;
 }
 .thesis em { font-style: normal; color: var(--accent-ink); }
+.thesis em.p { color: var(--purple-ink); }
 .lede { margin: 0; max-width: 62ch; color: var(--ink-2); font-size: 1.125rem; }
-.lede a { color: var(--ink); text-decoration-color: var(--accent); text-underline-offset: 3px; }
+.lede a { color: var(--purple-ink); text-decoration-color: var(--accent); text-underline-offset: 3px; }
 
 .spec {
   margin: 8px 0 0; max-width: 620px;
@@ -212,7 +223,7 @@ a:focus-visible, button:focus-visible {
 .spec dt { border-right: 1px solid var(--rule); align-self: stretch; display: flex; align-items: center; }
 .spec dd { font-size: var(--s-small); font-weight: 500; min-width: 0; overflow-wrap: anywhere; }
 .spec dt:nth-last-of-type(1), .spec dd:last-of-type { border-bottom: 0; }
-.spec a { text-decoration-color: var(--accent); text-underline-offset: 3px; }
+.spec a { color: var(--purple-ink); text-decoration-color: var(--accent); text-underline-offset: 3px; }
 @media (max-width: 479px) {
   .spec { grid-template-columns: 1fr; }
   .spec dt { border-right: 0; border-bottom: 0; padding-bottom: 0; }
@@ -227,56 +238,27 @@ a:focus-visible, button:focus-visible {
   transition: transform .15s ease, background-color .15s ease, color .15s ease;
 }
 .btn-primary { background: var(--btn-bg); color: var(--btn-fg); }
-.btn-primary:hover { transform: translateY(-1px); }
+.btn-primary:hover { transform: translateY(-1px); box-shadow: 0 3px 0 0 var(--accent); }
 .btn-ghost { background: transparent; color: var(--ink); border-color: var(--rule); }
 .btn-ghost:hover { border-color: var(--ink); }
 .btn svg { width: 14px; height: 14px; }
 
-/* portrait: framed like a detail view with registration marks */
-.portrait { margin: 0; justify-self: start; width: min(100%, 280px); position: relative; padding: 14px; order: -1; }
-@media (min-width: 960px) { .portrait { order: 0; justify-self: end; width: min(100%, 430px); margin-top: 8px; } }
-.portrait .frame { position: relative; border: 1px solid var(--rule); background: var(--sheet); padding: 8px; }
+/* portrait: clean photo on a soft purple offset block */
+.portrait { margin: 0 14px 14px 0; justify-self: start; width: min(calc(100% - 14px), 280px); position: relative; order: -1; }
+@media (min-width: 960px) { .portrait { order: 0; justify-self: end; width: min(calc(100% - 14px), 420px); margin-top: 8px; } }
+.portrait::before {
+  content: ""; position: absolute; inset: 14px -14px -14px 14px; z-index: 0;
+  background: var(--photo-back); border-radius: 6px;
+}
+.portrait .frame { position: relative; z-index: 1; border-radius: 6px; overflow: hidden; border-bottom: 4px solid var(--accent); }
 .portrait img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; max-width: 100%; }
-.mark { position: absolute; width: 22px; height: 22px; pointer-events: none; }
-.mark::before, .mark::after { content: ""; position: absolute; background: var(--accent); }
-.mark::before { width: 100%; height: 2px; }
-.mark::after { width: 2px; height: 100%; }
-.mark.tl { top: 0; left: 0; }
-.mark.tr { top: 0; right: 0; } .mark.tr::before { right: 0; } .mark.tr::after { right: 0; }
-.mark.bl { bottom: 0; left: 0; } .mark.bl::before { bottom: 0; } .mark.bl::after { bottom: 0; }
-.mark.br { bottom: 0; right: 0; } .mark.br::before { bottom: 0; right: 0; } .mark.br::after { bottom: 0; right: 0; }
-.mark::before { transform-origin: left center; }
-.mark.tr::before, .mark.br::before { transform-origin: right center; }
-.mark::after { transform-origin: center top; }
-.mark.bl::after, .mark.br::after { transform-origin: center bottom; }
-@media (prefers-reduced-motion: no-preference) {
-  .mark::before { animation: drawX .55s cubic-bezier(.2,.7,.2,1) both; }
-  .mark::after { animation: drawY .55s cubic-bezier(.2,.7,.2,1) both; }
-  .mark.tr::before, .mark.tr::after { animation-delay: .12s; }
-  .mark.br::before, .mark.br::after { animation-delay: .24s; }
-  .mark.bl::before, .mark.bl::after { animation-delay: .36s; }
-}
-@keyframes drawX { from { transform: scaleX(0); } to { transform: scaleX(1); } }
-@keyframes drawY { from { transform: scaleY(0); } to { transform: scaleY(1); } }
-.portrait figcaption {
-  margin-top: 14px; display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap;
-}
 
 /* ---------- sections ---------- */
 main section { padding-block: 72px; border-bottom: 1px solid var(--rule); }
 main section:last-of-type { border-bottom: 0; }
 .sec-head { display: grid; gap: 10px; margin-bottom: 36px; }
 .sec-title { display: flex; align-items: center; gap: 14px; margin: 0; }
-.datum {
-  flex: none; display: inline-grid; place-items: center;
-  width: 30px; height: 30px; border: 1.5px solid var(--accent);
-  font-family: var(--f-mono); font-size: .875rem; font-weight: 500; color: var(--accent-ink);
-  position: relative;
-}
-.datum::after { /* the datum triangle on its leader */
-  content: ""; position: absolute; left: 50%; bottom: -9px; transform: translateX(-50%);
-  border-left: 5px solid transparent; border-right: 5px solid transparent; border-top: 8px solid var(--accent);
-}
+.sec-head > .label { color: var(--purple-ink); }
 .sec-title h2 {
   margin: 0; font-family: var(--f-display); font-weight: 600; font-size: var(--s-h2);
   line-height: 1.05; text-wrap: balance;
@@ -288,7 +270,7 @@ main section:last-of-type { border-bottom: 0; }
 @media (min-width: 1000px) { .chain { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0; } }
 .stage {
   position: relative; min-width: 0; padding: 22px 22px 24px;
-  border: 1px solid var(--rule); background: var(--sheet);
+  border: 1px solid var(--rule); border-top: 3px solid var(--purple); background: var(--sheet);
   display: grid; gap: 12px; align-content: start;
 }
 @media (min-width: 1000px) {
@@ -304,7 +286,7 @@ main section:last-of-type { border-bottom: 0; }
 .stage .tags { display: flex; flex-wrap: wrap; gap: 6px; margin: 2px 0 0; padding: 0; list-style: none; }
 .stage .tags li {
   font-family: var(--f-mono); font-size: .75rem; padding: 3px 8px;
-  border: 1px solid var(--accent); color: var(--accent-ink); border-radius: 2px;
+  border: 1px solid transparent; background: var(--purple-tint); color: var(--purple-ink); border-radius: 2px;
 }
 .stage .did { margin: 4px 0 0; padding: 12px 0 0; border-top: 1px dashed var(--rule); list-style: none; display: grid; gap: 8px; }
 .stage .did li { font-size: var(--s-small); color: var(--ink-2); padding-left: 16px; position: relative; }
@@ -325,7 +307,7 @@ main section:last-of-type { border-bottom: 0; }
 /* ---------- timelines (education, experience, honors) ---------- */
 .group-label { margin: 0 0 14px; }
 .group + .group { margin-top: 48px; }
-.rows { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--ink); }
+.rows { list-style: none; margin: 0; padding: 0; border-top: 2px solid var(--purple); }
 .row {
   display: grid; gap: 6px 32px; padding: 26px 0 28px; border-bottom: 1px solid var(--rule);
   grid-template-columns: 1fr; position: relative;
@@ -344,7 +326,7 @@ main section:last-of-type { border-bottom: 0; }
 .what { min-width: 0; }
 .what h3 { margin: 0; font-size: var(--s-h3); font-weight: 600; line-height: 1.3; }
 .where { margin: 2px 0 0; color: var(--ink-2); }
-.where a { text-decoration-color: var(--accent); text-underline-offset: 3px; }
+.where a { color: var(--purple-ink); text-decoration-color: var(--accent); text-underline-offset: 3px; }
 .meta-line { margin: 8px 0 0; font-size: var(--s-small); color: var(--ink-2); }
 .meta-line b { font-weight: 600; color: var(--ink); }
 .bullets { margin: 12px 0 0; padding: 0; list-style: none; display: grid; gap: 6px; max-width: 70ch; }
@@ -352,15 +334,15 @@ main section:last-of-type { border-bottom: 0; }
 .bullets li::before { content: ""; position: absolute; left: 2px; top: .6em; width: 6px; height: 6px; border: 1.5px solid var(--accent); }
 .badge {
   display: none; width: 64px; height: 64px; place-items: center; align-self: start;
-  border: 1px solid var(--rule); background: var(--sheet);
-  font-family: var(--f-display); font-weight: 700; font-size: 1.25rem; letter-spacing: .04em; color: var(--ink-2);
+  border: 0; background: var(--purple-tint); border-radius: 4px;
+  font-family: var(--f-display); font-weight: 700; font-size: 1.25rem; letter-spacing: .04em; color: var(--purple-ink);
 }
 @media (min-width: 760px) { .badge { display: grid; } }
 .course { margin: 14px 0 0; display: flex; flex-wrap: wrap; gap: 6px; padding: 0; list-style: none; }
 .course li { font-size: .8125rem; padding: 2px 8px; border: 1px solid var(--rule); border-radius: 2px; color: var(--ink-2); background: var(--sheet); }
 
 /* ---------- publications ---------- */
-.pubs { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--ink); }
+.pubs { list-style: none; margin: 0; padding: 0; border-top: 2px solid var(--purple); }
 .pub {
   display: grid; gap: 10px 32px; padding: 28px 0; border-bottom: 1px solid var(--rule);
   grid-template-columns: 1fr;
@@ -372,7 +354,7 @@ main section:last-of-type { border-bottom: 0; }
   padding: 3px 8px; border-radius: 2px; border: 1px solid var(--accent);
 }
 .status.done { background: var(--accent); color: var(--on-accent); }
-.status.wip { color: var(--accent-ink); border-style: dashed; }
+.status.wip { color: var(--purple-ink); border-color: var(--purple-ink); border-style: dashed; }
 .pub h3 { margin: 0; font-family: var(--f-display); font-weight: 600; font-size: 1.6rem; line-height: 1.12; text-wrap: balance; max-width: 34ch; }
 .authors { margin: 8px 0 0; color: var(--ink-2); font-size: var(--s-small); }
 .authors b { color: var(--ink); font-weight: 600; }
@@ -385,7 +367,7 @@ main section:last-of-type { border-bottom: 0; }
 .kit-cell { padding: 22px 22px 24px; border-right: 1px solid var(--rule); border-bottom: 1px solid var(--rule); background: var(--sheet); min-width: 0; }
 .kit-cell h3 { margin: 0 0 12px; font-size: 1.0625rem; font-weight: 600; }
 .kit-cell ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px; }
-.kit-cell li { font-size: .875rem; padding: 4px 10px; border: 1px solid var(--rule); border-radius: 2px; background: var(--paper); }
+.kit-cell li { font-size: .875rem; padding: 4px 10px; border-radius: 2px; background: var(--purple-tint); }
 
 /* ---------- contact ---------- */
 .contact { display: grid; gap: 36px; grid-template-columns: 1fr; }
@@ -407,32 +389,13 @@ main section:last-of-type { border-bottom: 0; }
 }
 .copy-btn:hover { border-color: var(--ink); }
 
-/* ---------- title block footer ---------- */
-.title-block-wrap { padding-block: 40px 48px; border-top: 1px solid var(--rule);
-  background-image: linear-gradient(var(--grid) 1px, transparent 1px), linear-gradient(90deg, var(--grid) 1px, transparent 1px);
-  background-size: 24px 24px;
-}
-.title-block {
-  margin-left: auto; max-width: 720px; border: 2px solid var(--ink); background: var(--sheet);
-  display: grid; grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-@media (min-width: 640px) { .title-block { grid-template-columns: 2fr 1fr 1fr; } }
-.tb { padding: 10px 14px 12px; border-right: 1px solid var(--ink); border-bottom: 1px solid var(--ink); min-width: 0; display: grid; gap: 2px; }
-.tb .label { font-size: .625rem; }
-.tb .v { font-family: var(--f-mono); font-size: .8125rem; font-weight: 500; overflow-wrap: anywhere; }
-.tb.big .v { font-family: var(--f-display); font-size: 1.5rem; font-weight: 600; text-transform: uppercase; letter-spacing: .02em; line-height: 1.1; }
-.tb.span-all { grid-column: 1 / -1; }
-@media (min-width: 640px) {
-  .tb:nth-child(3n+4) { border-right: 0; }
-  .tb.span-all { border-right: 0; }
-  .tb.last-row { border-bottom: 0; }
-}
-@media (max-width: 639px) {
-  .tb:nth-child(2n+3) { border-right: 0; }
-  .tb.span-all { border-right: 0; }
-  .tb.m-last { border-bottom: 0; }
-}
-.fine { margin-top: 18px; text-align: right; }
+/* ---------- footer ---------- */
+.site-foot { background: var(--footer-bg); color: var(--footer-fg); }
+.site-foot .wrap { padding-block: 28px 32px; display: flex; flex-wrap: wrap; gap: 12px 28px; align-items: center; justify-content: space-between; }
+.site-foot p { margin: 0; font-size: var(--s-small); }
+.site-foot .sub { color: var(--footer-muted); font-size: .875rem; }
+.site-foot ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px 22px; }
+.site-foot a { color: var(--footer-fg); text-decoration-color: var(--accent); text-underline-offset: 4px; font-size: var(--s-small); }
 </style>
 </head>
 <body>
@@ -452,7 +415,7 @@ main section:last-of-type { border-bottom: 0; }
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
-    <button class="theme-btn" id="theme-toggle" type="button" aria-label="Switch color theme"><span class="swatch" aria-hidden="true"></span><span id="theme-label">Blueprint</span></button>
+    <button class="theme-btn" id="theme-toggle" type="button" aria-label="Switch color theme"><span class="swatch" aria-hidden="true"></span><span id="theme-label">Dark mode</span></button>
   </div>
 </header>
 
@@ -465,7 +428,7 @@ main section:last-of-type { border-bottom: 0; }
         <span>Clemson University</span>
       </div>
       <h1 class="name">Noubhar<br>Ahmad</h1>
-      <p class="thesis">How a part is <em>made</em> decides how it <em>performs</em>.</p>
+      <p class="thesis">How a part is <em>made</em> decides how it <em class="p">performs</em>.</p>
       <p class="lede">I'm a master's student in Mechanical Engineering at Clemson University, advised by <a href="https://cecas.clemson.edu/~rodrigm/about/" target="_blank" rel="noopener">Dr.&nbsp;Rodrigo Martinez-Duarte</a> in the Multiscale Manufacturing Laboratory. I work where manufacturing processes meet material behavior: additive manufacturing, stimuli-responsive metamaterials, and the testing that shows whether a process did its job. Before Clemson, I spent two years as a mechanical engineer designing engine components and characterizing alloy steels.</p>
 
       <dl class="spec">
@@ -487,12 +450,9 @@ main section:last-of-type { border-bottom: 0; }
     </div>
 
     <figure class="portrait">
-      <span class="mark tl" aria-hidden="true"></span><span class="mark tr" aria-hidden="true"></span>
-      <span class="mark bl" aria-hidden="true"></span><span class="mark br" aria-hidden="true"></span>
       <div class="frame">
         <img src="assets/headshot.jpg" width="1000" height="1250" alt="Portrait of Noubhar Ahmad, smiling, in a black hoodie against a grey studio backdrop.">
       </div>
-      <figcaption class="label"><span>Fig. 1</span><span>Noubhar Ahmad</span></figcaption>
     </figure>
   </div>
 </div>
@@ -503,7 +463,7 @@ main section:last-of-type { border-bottom: 0; }
     <div class="wrap">
       <div class="sec-head">
         <span class="label">Research interests · 4 linked stages</span>
-        <div class="sec-title"><span class="datum" aria-hidden="true">A</span><h2 id="h-research">From process to performance</h2></div>
+        <div class="sec-title"><h2 id="h-research">From process to performance</h2></div>
         <p class="sec-intro">Materials engineers think in a chain: processing sets structure, structure sets properties, and properties set performance. My interests follow that chain, and so does most of the work I've done so far.</p>
       </div>
       <ol class="chain">
@@ -554,7 +514,7 @@ main section:last-of-type { border-bottom: 0; }
     <div class="wrap">
       <div class="sec-head">
         <span class="label">2 degrees · 2019 to 2028</span>
-        <div class="sec-title"><span class="datum" aria-hidden="true">B</span><h2 id="h-education">Education</h2></div>
+        <div class="sec-title"><h2 id="h-education">Education</h2></div>
       </div>
       <ol class="rows">
         <li class="row">
@@ -590,7 +550,7 @@ main section:last-of-type { border-bottom: 0; }
     <div class="wrap">
       <div class="sec-head">
         <span class="label">2 research roles · 4 industry roles</span>
-        <div class="sec-title"><span class="datum" aria-hidden="true">C</span><h2 id="h-experience">Experience</h2></div>
+        <div class="sec-title"><h2 id="h-experience">Experience</h2></div>
       </div>
 
       <div class="group">
@@ -686,7 +646,7 @@ main section:last-of-type { border-bottom: 0; }
     <div class="wrap">
       <div class="sec-head">
         <span class="label">1 published · 1 in preparation</span>
-        <div class="sec-title"><span class="datum" aria-hidden="true">D</span><h2 id="h-publications">Publications</h2></div>
+        <div class="sec-title"><h2 id="h-publications">Publications</h2></div>
       </div>
       <ol class="pubs">
         <li class="pub">
@@ -719,7 +679,7 @@ main section:last-of-type { border-bottom: 0; }
     <div class="wrap">
       <div class="sec-head">
         <span class="label">Tools, tests, processes and materials</span>
-        <div class="sec-title"><span class="datum" aria-hidden="true">E</span><h2 id="h-toolkit">The toolkit</h2></div>
+        <div class="sec-title"><h2 id="h-toolkit">The toolkit</h2></div>
       </div>
       <div class="kit">
         <div class="kit-cell"><h3>Design</h3><ul><li>SolidWorks</li><li>Component design</li><li>Design optimization</li></ul></div>
@@ -737,7 +697,7 @@ main section:last-of-type { border-bottom: 0; }
     <div class="wrap">
       <div class="sec-head">
         <span class="label">Awards, hackathons and service</span>
-        <div class="sec-title"><span class="datum" aria-hidden="true">F</span><h2 id="h-honors">Honors &amp; activities</h2></div>
+        <div class="sec-title"><h2 id="h-honors">Honors &amp; activities</h2></div>
       </div>
       <ol class="rows">
         <li class="row">
@@ -769,7 +729,7 @@ main section:last-of-type { border-bottom: 0; }
     <div class="wrap">
       <div class="sec-head">
         <span class="label">Get in touch</span>
-        <div class="sec-title"><span class="datum" aria-hidden="true">G</span><h2 id="h-contact">Contact</h2></div>
+        <div class="sec-title"><h2 id="h-contact">Contact</h2></div>
       </div>
       <div class="contact">
         <div>
@@ -807,17 +767,17 @@ main section:last-of-type { border-bottom: 0; }
   </section>
 </main>
 
-<footer class="title-block-wrap">
+<footer class="site-foot">
   <div class="wrap">
-    <div class="title-block" role="contentinfo">
-      <div class="tb big span-all"><span class="label">Title</span><span class="v">Noubhar Ahmad · Portfolio</span></div>
-      <div class="tb"><span class="label">Department</span><span class="v">Mechanical Engineering, Clemson University</span></div>
-      <div class="tb"><span class="label">Drawn by</span><span class="v">N. Ahmad</span></div>
-      <div class="tb"><span class="label">Revised</span><span class="v">Nov 2026</span></div>
-      <div class="tb last-row"><span class="label">Laboratory</span><span class="v">Multiscale Manufacturing Lab (M²L)</span></div>
-      <div class="tb last-row m-last"><span class="label">Scale</span><span class="v">1 : 1</span></div>
-      <div class="tb last-row m-last"><span class="label">Sheet</span><span class="v">1 of 1</span></div>
+    <div>
+      <p>© 2026 Noubhar Ahmad</p>
+      <p class="sub">MSc candidate, Mechanical Engineering · Clemson University</p>
     </div>
+    <ul>
+      <li><a href="https://www.linkedin.com/in/noubhar-ahmad" target="_blank" rel="noopener">LinkedIn</a></li>
+      <li><a href="assets/cv.pdf" target="_blank" rel="noopener">CV</a></li>
+      <li><a href="#top">Back to top</a></li>
+    </ul>
   </div>
 </footer>
 
@@ -835,7 +795,7 @@ main section:last-of-type { border-bottom: 0; }
     if (t) return t === 'dark';
     return !!(mq && mq.matches);
   }
-  function sync() { label.textContent = isDark() ? 'Vellum' : 'Blueprint'; }
+  function sync() { label.textContent = isDark() ? 'Light mode' : 'Dark mode'; }
 
   var s = stored();
   if (s === 'dark' || s === 'light') root.setAttribute('data-theme', s);
